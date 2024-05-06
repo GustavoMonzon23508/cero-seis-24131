@@ -1,4 +1,4 @@
-let loadMoreBtn=document.querySelector('#load-more');
+let loadMoreBtn = document.querySelector('#load-more');
 let currentItem = 8;
 
 loadMoreBtn.onClick = () => {
