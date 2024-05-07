@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header class="contacto-header">
+    <a href="../index.html" style="color: white;font-size: 2rem;">inicio</a> <!--simulacion de header -->
+  </header>
+  <main class="container">
+    <div class="contacto-title">
+      <h2>Comuníquese con nosotros</h2>
+    </div>
+    <div class="contacto-main">
+      <div>
+        <form action="" class="contacto-form">
+          <div>
+            <label for="nombre"></label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" maxlength="40" required>
+            <span>ingrese su nombre</span>
+          </div>
+          <div>
+            <label for="email"></label>
+            <input type="email" id="email" name="email" placeholder="email@email.com" maxlength="40" required>
+            <span>ingrese su email</span>
+          </div>
+          <div>
+            <label for="telefono"></label>
+            <input type="tel" id="telefono" name="telefono" placeholder="011 55777888" maxlength="15" required>
+            <span>ingrese su número de teléfono</span>
+          </div>
+          <div>
+            <label for="mensaje"></label>
+            <textarea name="mensaje" id="mensaje" cols="35" rows="7" placeholder="ingrese el texto aqui"></textarea>
+          </div>
+          <div>
+            <input type="submit" id="Enviar" name="submit" value="Enviar mensaje" class="contacto-form-button">
+          </div>
+        </form>
+      </div>
+
+      <div class="contacto-redes">
+        <h3>donde podes seguirnos</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/" alt="facebook" target="_blank">facebook
+            </a></li>
+          <li><a href="https://www.x.com/" alt="twitter" target="_blank">twitter
+            </a></li>
+          <li><a href="https://www.instagram.com/" alt="instagram" target="_blank">instagram
+            </a></li>
+        </ul>
+      </div>
+
+      <div class="contacto-encontranos">
+        <h3>donde podes encontrarnos</h3>
+        <iframe src="http://epok.buenosaires.gob.ar/pub/mapa/deportes/mapa_de_deportes_clubes/ height='auto'"
+          frameborder="0"></iframe>
+        <p>encontranos en Av Ficticia 999 - Capital Federal</p>
+        <p>estamos para vos las 24 horas del dia</p>
+        <p>escribinos al whatsapp al +54 9 11 555-5555</p>
+        <p>o llamanos directamente al +54 9 11 555-5555</p>
+      </div>
+    </div>
+  </main>
+  <footer class="contacto-header"></footer>
+
+  <script src="../script.js"></script>
+</body>
+
+</html>
