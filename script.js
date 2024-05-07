@@ -6,8 +6,8 @@ loadMoreBtn.onClick = () => {
     for(var i = currentItem; i < currentItem + 4; i++) {
         boxes[i].style.display = 'inline-block';
     }
-    currentItem +=4;
-    if(currentItem >=boxes.length) {
+    currentItem += 4;
+    if(currentItem >= boxes.length) {
         loadMoreBtn.style.display = 'none'
     }
 }
