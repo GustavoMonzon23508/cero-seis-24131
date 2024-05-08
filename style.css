@@ -434,7 +434,7 @@ h2 {
 .contacto-form input[type="email"],
 .contacto-form input[type="tel"],
 .contacto-form textarea {
-  padding: 0.7rem;
+  padding: 0.5rem;
   margin: 0.2rem;
   border-radius: 1rem;
   font-size: 0.9rem;
@@ -459,17 +459,69 @@ h2 {
   background-color: #9bce21;
   color: #f1f1f1;
 }
+.contacto-form-span {
+  font-size: 0.9rem;
+}
 .contacto-redes {
   background-color: #e9e9e9;
-  padding: 20px;
+  padding: 1.3rem;
   text-align: center;
   margin-bottom: 10px;
 }
-@media (max-width: 600px) {
+.contacto-redes ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.3rem;
+  gap: 30px;
+  transition: 4s ease;
+}
+.contacto-redes ul li:hover {
+  opacity: 0.7;
+}
+.contacto-encontranos {
+  padding: 1.3rem;
+}
+.contacto-redes h3,
+.contacto-encontranos h3 {
+  color: #9bce21;
+}
+@media (min-width: 768px) {
+  .contacto-form-wrapper {
+    padding: 1.3rem;
+  }
+  .contacto-main {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contacto-redes {
+    background-color: #ffffff;
+    align-self: center;
+  }
+  .contacto-redes ul {
+    flex-direction: column;
+  }
+  .contacto-redes span {
+    font-size: 0.8rem;
+    color: #111;
+  }
+  .contacto-encontranos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-@media (max-width: 768px) {
-}
-
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
+  .contacto-form-div {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  .contacto-form-span {
+    display: flex;
+    align-self: center;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    padding: 0.3rem;
+  }
 }
