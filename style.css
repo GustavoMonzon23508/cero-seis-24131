@@ -397,6 +397,12 @@ h2 {
   #menu:checked ~ .navbar {
     display: initial;
   }
+  #menu:checked ~ .slider-container {
+    display: none;
+  }
+  .slider-item {
+    display: none;
+  }
   .logo {
     display: none;
   }
