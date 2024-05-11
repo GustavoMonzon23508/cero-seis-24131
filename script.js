@@ -55,6 +55,7 @@ function insertarCarrito(elemento) {
 
     `;
   lista.appendChild(row);
+  console.log(imagen);
 }
 function eliminarElemento(e) {
   e.preventDefault();
