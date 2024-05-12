@@ -36,26 +36,28 @@ function leerDatosElemento(elemento) {
     imagen: elemento.querySelector("img").src,
     titulo: elemento.querySelector("h3").textContent,
     precio: elemento.querySelector(".precio").textContent,
-    id: elemento.querySelector("a").getAttribute("data-id"),
-  };
+    id: elemento.querySelector("a").getAttribute("data-id")
+  }
   insertarCarrito(infoElemento);
 }
 function insertarCarrito(elemento) {
   const row = document.createElement("tr");
   row.innerHTML = `
     <td>
-        <img src=#${elemento.imagen}" width=100 height=150px >
+        <img src="${elemento.imagen}" width=100 height=80 >
     </td>
     <td>
         ${elemento.titulo}
     </td>
     <td>
-        <a href="#" class="borrar" data-id="$(elemento.id)"></a>
+        ${elemento.precio}
+    </td>
+    <td>
+        <a href="#" class="borrar" data-id="${elemento.id}"> X </a>
     </td>
 
     `;
   lista.appendChild(row);
-  console.log(imagen);
 }
 function eliminarElemento(e) {
   e.preventDefault();
