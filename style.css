@@ -98,7 +98,7 @@ td {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}/*
+} /*
 .header-txt {
   flex-basis: 50%;
   margin-right: 25px;
@@ -109,7 +109,7 @@ span {
   font-weight: 600;
   display: block;
   margin-bottom: 25px;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
 
 .header-txt img {
@@ -117,7 +117,6 @@ span {
   width: 50px;
   height: 50px;
   display: flex;
-
 }
 /*
 .header-txt p {
@@ -147,7 +146,7 @@ span {
 .header-img img {
   height: 300px;
 }*/
-.slider-container{
+.slider-container {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -157,52 +156,74 @@ span {
   grid-auto-flow: column;
   column-gap: 0.5rem; /* separacion entre imagenes*/
   overflow: auto;
+}
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+.slider-item {
+  position: relative;
+  width: 299px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  animation: slide 20s infinite linear;
+}
+.slider-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.slider-item img:hover {
+  filter: grayscale();
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
   }
-  .slider-container::-webkit-scrollbar{
-    display: none;
+  10% {
+    transform: translateX(0);
   }
-  .slider-item {
-   position: relative;
-   width: 299px;
-   height: 250px;
-   border-radius: 10px;
-   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-   animation: slide 20s infinite linear;
+
+  15% {
+    transform: translateX(-110%);
   }
-  .slider-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: all .3s ease-in-out;
-    cursor: pointer;
+  30% {
+    transform: translateX(-110%);
   }
-  
-  .slider-item img:hover{
-    filter:grayscale();
+
+  35% {
+    transform: translateX(-225%);
   }
-  @keyframes slide {
-    0%{transform: translateX(0);}
-    10%{transform: translateX(0);}
-  
-    15%{transform: translateX(-110%);}
-    30%{transform: translateX(-110%);}
-  
-    35%{transform: translateX(-225%);}
-    50%{transform: translateX(-225%);}
-  
-    55%{transform: translateX(-110%);} 
-    70%{transform: translateX(-110%);}
-  
-    75%{transform: translateX(0);}
-    90%{transform: translateX(0);}
-  
-    95%{transform: translateX(0);}
-    100%{transform: translateX(0);}
-  
+  50% {
+    transform: translateX(-225%);
   }
-  
-  
+
+  55% {
+    transform: translateX(-110%);
+  }
+  70% {
+    transform: translateX(-110%);
+  }
+
+  75% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(0);
+  }
+
+  95% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .oferts {
   padding: 100px 0;
   display: flex;
@@ -324,7 +345,7 @@ h2 {
 .testimonial-1 {
   flex-basis: calc(50% - 20px);
   padding: 50px;
-  text-align: left;  
+  text-align: left;
   border-top: 5px solid #9bce21;
 }
 .testimonial-1 img {
@@ -342,7 +363,7 @@ h2 {
 .testimonial-2 {
   flex-basis: calc(50% - 20px);
   padding: 50px;
-  text-align: left;  
+  text-align: left;
   border-top: 5px solid #9bce21;
 }
 .testimonial-2 img {
@@ -467,12 +488,6 @@ h2 {
 
 /* CONTACTO.HTML */
 
-.contacto-header {
-  /* simulacion de header */
-  height: 100px;
-  background-color: #515557;
-}
-
 .contacto-title {
   height: 400px;
   background-image: url("../assets/images/pr1.jpg");
@@ -491,6 +506,7 @@ h2 {
   padding: 15px;
   margin-bottom: 10px;
 }
+
 /*form*/
 
 .contacto-form input[type="text"],
@@ -525,6 +541,7 @@ h2 {
 .contacto-form-span {
   font-size: 0.9rem;
 }
+
 .contacto-redes {
   background-color: #e9e9e9;
   padding: 1.3rem;
@@ -549,6 +566,18 @@ h2 {
 .contacto-encontranos h3 {
   color: #9bce21;
 }
+
+.contacto-form-motivo {
+  border: none;
+}
+.contacto-form-motivo select {
+  outline: none;
+  list-style-type: none;
+  border: 2px solid #9bce21;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
 @media (min-width: 768px) {
   .contacto-form-wrapper {
     padding: 1.3rem;
@@ -579,6 +608,7 @@ h2 {
   .contacto-form-div {
     display: flex;
     margin-bottom: 1rem;
+    gap: 5px;
   }
   .contacto-form-span {
     display: flex;

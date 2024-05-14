@@ -9,8 +9,43 @@
 </head>
 
 <body>
-  <header class="contacto-header">
-    <a href="../index.html" style="color: white;font-size: 2rem;">inicio</a> <!--simulacion de header -->
+  <header class="header">
+    <div class="menu container">
+      <a href="../index.html#menu" class="logo">CERO SEIS store</a>
+      <input type="checkbox" id="menu" />
+      <label for="menu">
+        <img src="../assets/icons/menu.png" class="menu-icono" alt="menu">
+      </label>
+      <nav class="navbar">
+        <ul>
+          <li><a href="../index.html">inicio</a></li>
+          <li><a href="../index.html#lista-1">Productos</a></li>
+          <li><a href="#">contacto</a></li>
+          <li><a href="./quienes_somos.html">quienes somos</a></li>
+        </ul>
+      </nav>
+      <div>
+        <ul>
+          <li class="submenu">
+            <img id="img-carrito" src="../assets/icons/cart 80.png" alt="cart">
+            <div id="carrito">
+              <table id="lista-carrito">
+                <thead>
+                  <tr>
+                    <th>imagen </th>
+                    <th>nombre </th>
+                    <th>precio </th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+              <a href="#" id="vaciar-carrito" class="btn-3">Vaciar carrito</a>
+              <a href="#" id="Ir-al-pago" class="btn-3">Ir al pago</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </header>
   <main class="container">
     <div class="contacto-title">
@@ -18,7 +53,17 @@
     </div>
     <div class="contacto-main">
       <div class="contacto-form-wrapper">
-        <form action="" class="contacto-form">
+        <form action="" class="contacto-form" id="contactoForm">
+          <div class="contacto-form-div contacto-form-motivo">
+            <label for="motivo">Motivo de contacto:</label>
+            <select id="motivo" name="motivo" required>
+              <option value="" disabled selected hidden>Seleccione un motivo</option>
+              <option value="Consulta">Consulta</option>
+              <option value="Sugerencia">Sugerencia</option>
+              <option value="Reportar un problema">Reportar un problema</option>
+              <option value="Devolver un articulo">Devolver un articulo</option>
+            </select>
+          </div>
           <div class="contacto-form-div">
             <label for="nombre"></label>
             <input type="text" id="nombre" name="nombre" placeholder="Nombre" maxlength="40" required>
@@ -37,6 +82,25 @@
           <div>
             <label for="mensaje"></label>
             <textarea name="mensaje" id="mensaje" cols="35" rows="7" placeholder="ingrese el texto aqui"></textarea>
+          </div>
+
+          <div class="contacto-form-div">
+            <label for="imagen">Adjuntar imagen(solo JPG y PNG): </label>
+            <input type="file" id="contacto-imagen" name="imagen" accept="image/jpeg, image/png">
+            <svg id="contacto-imagen-validation" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="30"
+              height="30" viewBox="0 0 24 24" fill="none" stroke="#7bff75" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <div>
+            <input type="checkbox" id="terminos" name="terminos" required>
+            <label for="terminos">He leído y acepto los <a href="#" target="_blank">términos y condiciones</a></label>
+          </div>
+          <div>
+            <input type="checkbox" id="suscripcion" name="suscripcion">
+            <label for="suscripcion">Deseo suscribirme para recibir ofertas y promociones por correo
+              electrónico.</label>
           </div>
           <div>
             <input type="submit" id="Enviar" name="submit" value="Enviar mensaje" class="contacto-form-button">
@@ -81,6 +145,20 @@
   </main>
   <footer class="contacto-header"></footer>
 
+
+  <script>
+    const contactoImg = document.getElementById("contacto-imagen");
+
+    contactoImg.addEventListener("change", function () {
+      let check = document.getElementById("contacto-imagen-validation");
+      if (this.files && this.files[0]) {
+        console.log("asd");
+        check.style.display = "block";
+      } else {
+        check.style.display = "none";
+      }
+    });
+  </script>
 </body>
 
 </html>
