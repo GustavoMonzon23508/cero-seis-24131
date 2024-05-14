@@ -36,8 +36,8 @@ function leerDatosElemento(elemento) {
     imagen: elemento.querySelector("img").src,
     titulo: elemento.querySelector("h3").textContent,
     precio: elemento.querySelector(".precio").textContent,
-    id: elemento.querySelector("a").getAttribute("data-id")
-  }
+    id: elemento.querySelector("a").getAttribute("data-id"),
+  };
   insertarCarrito(infoElemento);
 }
 function insertarCarrito(elemento) {
