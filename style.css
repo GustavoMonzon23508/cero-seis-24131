@@ -559,8 +559,14 @@ h2 {
 .contacto-redes ul li:hover {
   opacity: 0.7;
 }
+.contacto-redes span {
+  font-size: 1.8rem;
+}
 .contacto-encontranos {
   padding: 1.3rem;
+}
+.contacto-encontranos p {
+  color: #111;
 }
 .contacto-redes h3,
 .contacto-encontranos h3 {
@@ -576,6 +582,9 @@ h2 {
   border: 2px solid #9bce21;
   border-radius: 10px;
   font-weight: bold;
+}
+.contacto-form div {
+  margin-bottom: 0.8rem;
 }
 
 @media (min-width: 768px) {
@@ -684,4 +693,3 @@ p {
   gap: 0.75rem;
   list-style-type: none;
 }
-
