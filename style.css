@@ -649,13 +649,13 @@ h4 {
   background-color: rgba(0, 0, 0, 0.2);
   font-size: large;
 }
-h2{
+h2 {
   text-align: center;
 }
-.secciones img{
+.secciones img {
   width: fit-content;
   background-image: url("/assets/images/Foto-quienes-somos.jpg");
-  background-size: cover; 
+  background-size: cover;
   background-position: 50% 90%;
   background-repeat: no-repeat;
   display: flex;
