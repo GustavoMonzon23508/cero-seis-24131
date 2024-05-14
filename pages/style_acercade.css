@@ -1,33 +1,39 @@
-#textos-header{
+.contenido{
+    background-color: #eff3f4;
+}
+
+body{
+ background-color: #eff3f4;
+}
+
+h2{
+    font-family: "poppins", sans-serif;
+    color: black;
+    text-align: center;
+    padding: 50px 50px 50px 50px;
+}
+
+h2:hover{
     color: #9bce21;
-    font-family: 'poppins', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    display: flex;
-    height: 100px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+
+}
+
+destacado:hover{
+    color: #9bce21;
+    font-family: "poppins", sans-serif;
+}
+
+img{
+    max-height: 400px;
+    width: 1200px;
+    margin: 0;
+    object-fit: cover;
+    padding-block-end: 50px;
+}
+
+p{
+    font-family: "poppins", sans-serif;
+    color: black;
     text-align: center;
-    
-}
-
-.est-img{
-    align-items: center;
-    display: flex;
-    justify-content: center;
- 
-}
-
-.txt-reseña{
-    width: 100%;
-    align-content: center;
-    align-items: center;
-    text-align: center;
-    margin-right: 120PX;
-    margin-left: 120PX;
-}
-    
-
-
-body { 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:#eff3f4;
 }
