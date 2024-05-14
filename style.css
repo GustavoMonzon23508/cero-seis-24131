@@ -643,6 +643,25 @@ h2 {
 p {
   color: #ffffff;
 }
+h4 {
+  color: #111419;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: large;
+}
+h2{
+  text-align: center;
+}
+.secciones img{
+  width: fit-content;
+  background-image: url("/assets/images/Foto-quienes-somos.jpg");
+  background-size: cover; 
+  background-position: 50% 90%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .footer-bottom > small {
   margin: 0 0.25rem;
