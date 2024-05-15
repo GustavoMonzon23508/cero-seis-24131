@@ -1,4 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url(../style.css);
+.contenido {
+  height: 600px;
+  background-image: url("../assets/images/Foto-quienes-somos.jpg");
+  background-size: cover;
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+.secciones {
+  max-width: 70%;
+  max-height: 50%;
+  background-color: rgba(0, 0, 0, 0.37);
+  border-radius: 20px;
+  backdrop-filter: blur(2px);
+  color: #ffffff;
+  padding: 20px;
+}
+/*
 * {
   margin: 0;
   padding: 0;
@@ -10,13 +31,16 @@ body {
     font-family: "poppins", sans-serif;
     background-color: #eff3f4;
     display: flex;
-  }
+    background-image: url("/assets/images/Foto-quienes-somos.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }/*
   img {
     max-width: 100%;
   }
   .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto;    
   }
   .header {
     display: flex;
@@ -45,7 +69,7 @@ destacado:hover{
 }
 
 img{
-    /*max-height: 400px;*/
+    max-height: 400px;
     width: 1200px;
     margin: 0;
     object-fit: cover;
@@ -57,6 +81,88 @@ p{  position: absolute;
     text-align: center;
     background-color:#eff3f4;
 }
-footer {
+*/
+foooter {
     position: fixed;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem 0px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: #aeafaf;
+}
+p {
+  color: #ffffff;
+}
+h4 {
+  color: #111419;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: large;
+}
+h2 {
+  text-align: center;
+}
+.secciones img {
+  width: auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-bottom > small {
+  margin: 0 0.25rem;
+}
+
+.footer-headline > h2 {
+  margin: 0;
+  color: #f1f1f1;
+}
+
+.footer-headline > p {
+  color: #9bce21;
+  margin: 0.25rem 0 1.25rem 0;
+}
+
+.footer-line {
+  display: block;
+  min-width: 2.5rem;
+  height: 0.125rem;
+  background: #91ddb8;
+}
+
+/*? socials */
+.social-links {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.social-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.social-links img {
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+.social-links ul {
+  display: flex;
+  gap: 0.75rem;
+  list-style-type: none;
 }
