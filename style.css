@@ -495,7 +495,7 @@ h2 {
 
 .contacto-title {
   height: 400px;
-  background-image: url("../assets/images/pr1.jpg");
+  background-image: url("./assets/images/pr1.jpg");
   background-size: cover;
   background-position: 50% 70%;
   background-repeat: no-repeat;
