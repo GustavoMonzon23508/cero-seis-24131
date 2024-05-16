@@ -82,9 +82,6 @@ p{  position: absolute;
     background-color:#eff3f4;
 }
 */
-foooter {
-    position: fixed;
-}
 
 .footer-bottom {
   text-align: center;
@@ -111,7 +108,7 @@ h2 {
   text-align: center;
 }
 .secciones img {
-  width: auto; 
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
