@@ -95,7 +95,7 @@ p{  position: absolute;
   justify-content: space-between;
   background-color: #aeafaf;
 }
-p {
+.footer-bottom p {
   color: #ffffff;
 }
 h4 {
