@@ -480,7 +480,7 @@ h2 {
   .footer {
     padding: 30px;
   }
-  .footer-content {
+  .footer-bottom {
     flex-direction: column;
     text-align: center;
   }
