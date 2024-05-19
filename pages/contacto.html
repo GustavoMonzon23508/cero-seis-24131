@@ -58,7 +58,7 @@
         <form action="#" class="contacto-form" id="contactoForm">
           <div class="contacto-form-div contacto-form-motivo">
             <label for="motivo">Motivo de contacto:</label>
-            <select id="motivo" name="motivo" required>
+            <select id="motivo" name="motivo">
               <option value="" disabled selected hidden>Seleccione un motivo</option>
               <option value="Consulta">Consulta</option>
               <option value="Sugerencia">Sugerencia</option>
@@ -68,23 +68,22 @@
           </div>
           <div class="contacto-form-div">
             <label for="nombre"></label>
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" maxlength="40" required>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" maxlength="40">
             <span class="contacto-form-span">ingrese su nombre</span>
           </div>
           <div class="contacto-form-div">
             <label for="email"></label>
-            <input type="email" id="email" name="email" placeholder="email@email.com" maxlength="40" required>
+            <input type="email" id="email" name="email" placeholder="email@email.com" maxlength="40">
             <span class="contacto-form-span">ingrese su email</span>
           </div>
           <div class="contacto-form-div">
             <label for="telefono"></label>
-            <input type="tel" id="telefono" name="telefono" placeholder="011 55777888" maxlength="15" required>
+            <input type="tel" id="telefono" name="telefono" placeholder="011 55777888" maxlength="15">
             <span class="contacto-form-span">ingrese su número de teléfono</span>
           </div>
           <div>
             <label for="mensaje"></label>
-            <textarea name="mensaje" id="mensaje" cols="35" rows="7" placeholder="ingrese el texto aqui"
-              required></textarea>
+            <textarea name="mensaje" id="mensaje" cols="35" rows="7" placeholder="ingrese el texto aqui"></textarea>
           </div>
 
           <div class="contacto-form-div">
@@ -97,7 +96,7 @@
             </svg>
           </div>
           <div>
-            <input type="checkbox" id="terminos" name="terminos" required>
+            <input type="checkbox" id="terminos" name="terminos">
             <label for="terminos">He leído y acepto los <a href="#" target="_blank">términos y condiciones</a></label>
           </div>
           <div>
@@ -144,7 +143,7 @@
       <h3>Donde podes encontrarnos</h3>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26281.718232578973!2d-58.4416579045644!3d-34.573431612529305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb564f74f69c3%3A0xeea87be2795e86d2!2sMuseo%20de%20Arte%20Latinoamericano%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1715832885288!5m2!1sen!2sar"
-        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        max-width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
       <p>Encontranos en Av Ficticia 999 - Capital Federal</p>
       <p>estamos para vos las 24 horas del dia</p>
@@ -201,6 +200,91 @@
         check.style.display = "none";
       }
     });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contactoForm');
+      const motivo = document.getElementById('motivo');
+      const nombre = document.getElementById('nombre');
+      const email = document.getElementById('email');
+      const telefono = document.getElementById('telefono');
+      const mensaje = document.getElementById('mensaje');
+      const terminos = document.getElementById('terminos');
+
+      form.addEventListener('submit', function (event) {
+        let isValid = true;
+        let errorMessages = {
+          motivo: '',
+          nombre: '',
+          email: '',
+          telefono: '',
+          mensaje: '',
+          terminos: ''
+        };
+
+        clearErrorMessages();
+
+        if (motivo.value === "") {
+          isValid = false;
+          errorMessages.motivo = 'Seleccione un motivo de contacto.';
+        }
+
+        if (nombre.value.trim() === "") {
+          isValid = false;
+          errorMessages.nombre = 'Ingrese un nombre.';
+        }
+
+        if (!validateEmail(email.value)) {
+          isValid = false;
+          errorMessages.email = 'Ingrese un email válido.';
+        }
+
+        if (!validatePhone(telefono.value)) {
+          isValid = false;
+          errorMessages.telefono = 'Ingrese un número de teléfono válido mayor a 8 dígitos.';
+        }
+
+        if (mensaje.value.trim() === "") {
+          isValid = false;
+          errorMessages.mensaje = 'Ingrese su mensaje.';
+        }
+
+        if (!terminos.checked) {
+          isValid = false;
+          errorMessages.terminos = 'Debe aceptar los términos y condiciones.';
+        }
+
+        if (!isValid) {
+          event.preventDefault();
+          displayErrorMessages(errorMessages);
+        }
+      });
+
+      function validateEmail(email) {
+        const emailValidation = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailValidation.test(String(email).toLowerCase());
+      }
+
+      function validatePhone(phone) {
+        const phoneValidation = /^\d{8,}$/;
+        return phoneValidation.test(String(phone));
+      }
+      function clearErrorMessages() {
+        const errorSpans = document.querySelectorAll('.mensajeError');
+        errorSpans.forEach(span => span.remove());
+      }
+      function displayErrorMessages(errorMessages) {
+        for (const [key, message] of Object.entries(errorMessages)) {
+          if (message) {
+            const field = document.getElementById(key);
+            const errorSpan = document.createElement('span');
+            errorSpan.className = 'mensajeError';
+            errorSpan.innerText = 'x' + ' ' + message;
+            field.parentElement.appendChild(errorSpan);
+          }
+        }
+      }
+    });
+
   </script>
 </body>
 
